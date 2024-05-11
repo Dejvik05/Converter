@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulačka na převod jednotek</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topRect">
+
+    </div>
+    <br>
+    
+    <h1>Převodník jednotek</h1>
+    <div class="inputs">
+    <p class="introduction">Tato aplikace umí převádět různé jednotky</p>
+    <label for="units">Vyberte veličinu:</label><br>
+    <select class="select" id="units" onchange="">
+    </select><br>
+    <label for="value_input">Zadejte hodnotu, kterou chcete převést:</label><br>
+    <input id="value_input" type="number">
+    <select id="input_unit"></select><br>
+    <label for="output_unit">Zadejte jednotku výsledku:</label><br>
+    <select id="output_unit" class="output_unit"></select><br>
+    </div>
+    <br>
+    <br>
+    <div class="result" id="result_div">
+    <p id="result"></p>
+    </div>
+    <br>
+    <button class="button" onclick="showDiv(), calculate()">Vypočítat</button><br>
+    <script src="unit.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
