@@ -8,14 +8,19 @@ class Unit {
     }
     getValueFrom(other, value) {
         value = this.fromBase(other.toBase(value));
+        value = this.isZero(value) ? 0 : value;
         return value.toFixed(Math.max(3, this.getFloatingPoint(value))) + this.symbol;
     }
     getFloatingPoint(value) {
+        if (value === 0) return 0;
         let point = 0;
-        while(value < 1) {
+        while(Math.abs(value) < 1) {
             value *= 10;
             point++;
         }
         return point;
+    }
+    isZero(value) {
+        return Math.abs(value) < 0.0000001;
     }
 }
