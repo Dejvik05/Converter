@@ -45,14 +45,14 @@ let units = [
     new Unit("mA", "mA", "Elektrický proud", (value) => {return value / 1000}, (value) => {return value * 1000}),
     //U resistance 
     new Unit("Ω", "Ω", "Elektrický odpor", (value) => {return value}, (value) => {return value}),
-    new Unit("mΩ", "mΩ", "Elektrický odpor", (value) => {return value * 1000}, (value) => {return value / 1000}),
-    new Unit("kΩ", "kΩ", "Elektrický odpor", (value) => {return value / 1000}, (value) => {return value * 1000}),
-    new Unit("MΩ", "MΩ", "Elektrický odpor", (value) => {return value / 1000000}, (value) => {return value * 1000000}),
+    new Unit("mΩ", "mΩ", "Elektrický odpor", (value) => {return value / 1000}, (value) => {return value * 1000}),
+    new Unit("kΩ", "kΩ", "Elektrický odpor", (value) => {return value * 1000}, (value) => {return value / 1000}),
+    new Unit("MΩ", "MΩ", "Elektrický odpor", (value) => {return value * 1000000}, (value) => {return value / 1000000}),
     //U units
     new Unit("V", "V", "Elektrické napětí", (value) => {return value}, (value) => {return value}),
-    new Unit("mV", "mV", "Elektrické napětí", (value) => {return value * 1000}, (value) => {return value / 1000}),
-    new Unit("kV", "kV", "Elektrické napětí", (value) => {return value / 1000}, (value) => {return value * 1000}),
-    new Unit("MV", "MV", "Elektrické napětí", (value) => {return value / 1000000}, (value) => {return value * 1000000}) 
+    new Unit("mV", "mV", "Elektrické napětí", (value) => {return value / 1000}, (value) => {return value * 1000}),
+    new Unit("kV", "kV", "Elektrické napětí", (value) => {return value * 1000}, (value) => {return value / 1000}),
+    new Unit("MV", "MV", "Elektrické napětí", (value) => {return value * 1000000}, (value) => {return value / 1000000}) 
 ]
 
 let unitsSelect = document.getElementById("units");
