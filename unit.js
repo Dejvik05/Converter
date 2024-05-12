@@ -8,14 +8,21 @@ class Unit {
     }
     getValueFrom(other, value) {
         value = this.fromBase(other.toBase(value));
-        return value.toFixed(Math.max(3, this.getFloatingPoint(value))) + this.symbol;
+        value = this.isZero(value) ? 0 : value;
+        return value.toFixed(this.getFloatingPoint(value)) + this.symbol;
     }
     getFloatingPoint(value) {
+        value = Math.abs(value);
+        if (value === 0) return 3;
         let point = 0;
         while(value < 1) {
             value *= 10;
             point++;
         }
-        return point;
+        value = value.toString();
+        return point + Math.min(value.length - value.indexOf('.') - 1, 3);
+    }
+    isZero(value) {
+        return Math.abs(value) < 0.000000000001;
     }
 }
