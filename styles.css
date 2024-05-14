@@ -49,7 +49,7 @@ body {
 
 }
 .inputs{
-    padding: 5px;
+    padding: 10px 5px 5px;
     text-align: center;
     border: 2px solid;
     display: inline-block;
@@ -99,4 +99,8 @@ input{
     width: 60%;
     margin: auto;
     display: inline-block;
+}
+.unit_label{
+    margin-top: 10px;
+    padding-top: 10px;
 }
