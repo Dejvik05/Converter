@@ -18,7 +18,7 @@ let units = [
     new Unit("cm²", "cm²", "Obsah", (value) => {return value / 10000}, (value) => {return value * 10000}),
     new Unit("dm²", "dm²", "Obsah", (value) => {return value / 100}, (value) => {return value * 100}),
     //volume units
-    new Unit("l", "l", "Objem", (value) => {return value}, (value) => {value}),
+    new Unit("l", "l", "Objem", (value) => {return value}, (value) => {return value}),
     new Unit("m³", "m³", "Objem", (value) => {return value * 1000}, (value) => {return value / 1000}),
     new Unit("mm³", "mm³", "Objem", (value) => {return value / 1000000}, (value) => {return value * 1000000}),
     new Unit("dm³", "dm³", "Objem", (value) => {return value}, (value) => {return value}),
